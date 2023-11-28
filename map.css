@@ -8,3 +8,6 @@ header {
 select {
     width: 100px;
 }
+div {
+    float: left;
+}
