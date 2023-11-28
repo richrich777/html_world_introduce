@@ -1,10 +1,10 @@
-html {
-    height: 100%;
-    background: linear-gradient(to top, #000000, #2A272A, #4B4A54, #677381, #82A0AA, #A3CFCD);
-}
-
-div {}
-
-h1 {
+header {
     text-align: center;
+    color: white;
+    height: 100px;
+    background-color: #2A272A;
+    padding: 1px;
+}
+select {
+    width: 100px;
 }
