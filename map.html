@@ -5,28 +5,7 @@
     <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" href="map.css">
-    <script>
-        let country;
-        function start() {
-            document.getElementById("continent").addEventListener("change", con);
-        }
-        function con() {
-            country = document.getElementById("country");
-            if (continent.value == "歐洲") {
-                country.innerHTML = "<label for='continent'>選擇地區:</label>" + "<select name='country' id='country' class='country'>" +
-                    "<option value='' disabled selected hidden></option>" +
-                    "<option value='英國'>英國</option>";
-            }
-            else if (continent.value == "亞洲") {
-                country.innerHTML = "<label for='continent'>選擇地區:</label>" + "<select name='country' id='country' class='country'>" +
-                    "<option value='' disabled selected hidden></option>" +
-                    "<option value='台灣'>台灣</option>";
-            }
-            else {
-                country.innerHTML ="";
-            }
-        }
-        window.addEventListener("load", start);
+    <script src="map.js">
     </script>
 </head>
 
@@ -34,7 +13,7 @@
     <header>
         <h1>地圖</h1>
     </header>
-    <div>
+    <div class="continentdiv">
         <label for="continent">選擇地區:</label>
         <select name="continent" id="continent" class="continent">
             <option value="" disabled selected hidden></option>
@@ -45,8 +24,11 @@
             <option value="南美洲">南美洲</option>
         </select>
     </div>
-    <div id="country">
+    <div class="country" id="country">
 
+    </div>
+    <div>
+        <button>確定</button>
     </div>
 </body>
 

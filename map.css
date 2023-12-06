@@ -5,9 +5,20 @@ header {
     background-color: #2A272A;
     padding: 1px;
 }
+
 select {
     width: 100px;
 }
-div {
-    float: left;
+
+body {
+    text-align: center;
+}
+.continentdiv {
+
+    height: 20px;
+    text-align: center;
+    padding: 100px;
+}
+.button {
+    margin: 50px;
 }
