@@ -3,7 +3,7 @@ let photoContainer;
 function start() {
     document.getElementById("continent").addEventListener("change", con);
     photoContainer = document.getElementById("photoContainer");
-    // generateAllPhotos();
+    generateAllPhotos();
 }
 
 function con() {
@@ -21,7 +21,7 @@ function generateAllPhotos() {
     let allCountries = ["台灣", "日本", "韓國", "英國", "法國", "埃及", "南非", "加拿大", "美國", "巴西", "阿根廷"];
     for (let i = 0; i < allCountries.length; i++) {
         let countryName = allCountries[i].toLowerCase();
-        let photoPath = "all_countries/" + countryName + ".jpg";
+        let photoPath = "pics/" + countryName + ".jpg";
         allPhotosHTML += "<div class='gallery-item' onclick='redirectToCountry(\"" + countryName + ".html\")'>" +
                           "<img src='" + photoPath + "' alt='" + allCountries[i] + "'>" +
                           "</div>";
@@ -52,7 +52,7 @@ function generatePhotos(continent) {
         let countryName = countries[i].toLowerCase();
         let photoPath = "pics/" + countryName + ".jpg";
         photoHTML += "<div class='gallery-item' onclick='redirectToCountry(\"" + countryName.toLowerCase() + ".html\")'>" +
-                     "<img src='" + photoPath + "' alt='" + countries[i] + "' width = '20px'; height = '20px'>" +
+                     "<img src='" + photoPath + "' alt='" + countries[i] + "'>" +
                      "</div>";
     }
 
