@@ -3,7 +3,7 @@ let photoContainer;
 function start() {
     document.getElementById("continent").addEventListener("change", con);
     photoContainer = document.getElementById("photoContainer");
-    generateAllPhotos();
+    // generateAllPhotos();
 }
 
 function con() {
@@ -50,9 +50,9 @@ function generatePhotos(continent) {
 
     for (let i = 0; i < countries.length; i++) {
         let countryName = countries[i].toLowerCase();
-        let photoPath = continent.toLowerCase() + "/" + countryName + ".jpg";
+        let photoPath = "pics/" + countryName + ".jpg";
         photoHTML += "<div class='gallery-item' onclick='redirectToCountry(\"" + countryName.toLowerCase() + ".html\")'>" +
-                     "<img src='" + photoPath + "' alt='" + countries[i] + "'>" +
+                     "<img src='" + photoPath + "' alt='" + countries[i] + "' width = '20px'; height = '20px'>" +
                      "</div>";
     }
 
@@ -61,7 +61,7 @@ function generatePhotos(continent) {
 }
 
 function redirectToCountry(countryPage) {
-    window.location.href = countryPage;
+    window.open(countryPage, '_blank');
 }
 
 
