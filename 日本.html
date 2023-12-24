@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>日本 - 美食探索</title>
     <style>
-                body {
+        body {
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
@@ -17,8 +17,7 @@
         header {
             text-align: center;
             padding: 20px;
-            background-color: #5B7F9E
-;
+            background-color: #5B7F9E;
             color: white;
         }
 
@@ -34,9 +33,10 @@
             border-radius: 8px;
         }
 
-        h1, h2, h3 {
-            color: #5B7F9E
-;
+        h1,
+        h2,
+        h3 {
+            color: #5B7F9E;
         }
 
         p {
@@ -53,26 +53,27 @@
             margin-bottom: 10px;
         }
 
-        img {
+        .container {
+            flex-direction: row;
+            display: flex;
+        }
+
+        .pic {
             max-width: 100%;
-            height: auto;
+            align-items: center;
+            width: 500px;
+            height: 300px;
+            margin-top: 150px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #333;
-            color: white;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+        .con1 {
+            width: 70%;
         }
 
-        .quote {
-            font-style: italic;
-            color: #888;
+        .con2 {
+            width: 30%;
         }
 
         .highlight {
@@ -107,37 +108,65 @@
     </header>
 
     <section>
-        <h2>國家概況</h2>
-        <p>日本是位於亞洲東部的島嶼國家，由四大島嶼（本州、九州、四國、北海道）和眾多小島組成。日本的歷史可以追溯到數千年前，其文化深受傳統價值觀念和現代科技的影響。</p>
-        <p>這個島國以其櫻花、寺廟、茶道和先進的科技而聞名。日本是一個融合傳統和現代的國家，吸引著許多遊客和美食愛好者。</p>
+        <h2>日本</h2>
+        <p>位於東亞的東北部，東臨太平洋，西隔日本海與亞洲大陸相望。由於地處地震帶上，日本是地震和火山活動較為頻繁的地區。</p>
+        <p>擁有豐富而獨特的文化，包括傳統的茶道、花道、歌舞伎、武士道等，以及現代的流行文化，如動漫、漫畫、音樂和電子遊戲。日本的文學、藝術和建築也有著深厚的傳統。</p>
+        <p>有著悠久的歷史，其歷史發展受到中國、朝鮮半島和其他亞洲文化的影響。江戶時代的結束標誌著明治時代的開始，日本進入了現代化的轉型期，成為一個工業化的國家。</p>
     </section>
 
-    <section>
-        <h2>美食介紹</h2>
-        <ul>
-            <li>
-                <h3>壽司</h3>
-                <p>壽司是日本的傳統美食，以新鮮的生魚片和醋飯製成。各種壽司包括握壽司、刺身、壽司卷等，每一種都展現了日本烹飪藝術的高超技巧。</p>
-            </li>
-            <li>
-                <h3>拉麵</h3>
-                <p>拉麵是一種受歡迎的日本麵條料理，有多種風味和湯底。從豚骨拉麵到醬油拉麵，每一碗都散發著獨特的香氣，滿足食客的味蕾。</p>
-            </li>
-            <!-- 其他美食項目 -->
-        </ul>
-    </section>
+    <div>
+        <section class="container">
+            <div class="con1">
+                <h2>美食介紹</h2>
+                <ul>
+                    <li>
+                        <h3 onmouseover="display1()" onmouseout="nodisplay()">壽司（Sushi）</h3>
+                        <p>壽司是日本的傳統食物之一，包括生魚片（鮨）配以醋飯，還有各種配料，如海苔、芥末和醬油。有許多不同種類的壽司，如握壽司、刺身和壽司卷。</p>
+                    </li>
+                    <li>
+                        <h3 onmouseover="display2()" onmouseout="nodisplay()">拉麵（Ramen）</h3>
+                        <p>拉麵是一種來自中國的麵條湯飯，已在日本發展出多種風味和變化。通常包括麵條、湯汁、豬肉、海苔、蔥等成分，每個地區都有獨特的風味。</p>
+                    </li>
+                    <li>
+                        <h3 onmouseover="display3()" onmouseout="nodisplay()">刺身（Sashimi）</h3>
+                        <p>刺身是生魚片的一種，通常搭配芥末和大豆醬油，以突顯新鮮魚肉的風味。刺身是日本料理的一個精緻而受歡迎的部分。</p>
+                    </li>
+                    <li>
+                        <h3 onmouseover="display4()" onmouseout="nodisplay()">天婦羅（Tempura）</h3>
+                        <p>天婦羅是將各種食材（通常是海鮮或蔬菜）裹上特製的麵糊，油炸至金黃酥脆。通常搭配蘸醬，是一種受歡迎的料理。</p>
+                    </li>
+                    <li>
+                        <h3 onmouseover="display5()" onmouseout="nodisplay()">日本甜點</h3>
+                        <p>日本甜點包括抹茶相關的甜點，如抹茶冰淇淋、抹茶蛋糕，還有各式和果實、紅豆等相關的和菓子（和式點心）。</p>
+                    </li>
+                </ul>
 
-    <section>
-        <h2>圖片集</h2>
-        <p>展示日本的美麗風景和令人垂涎的美食圖片。</p>
-        <div class="flex-container">
-            <div class="flex-item"><img src="https://placekitten.com/800/600" alt="日本美麗風景"></div>
-            <div class="flex-item"><img src="https://placekitten.com/800/601" alt="日本美食1"></div>
-            <div class="flex-item"><img src="https://placekitten.com/800/602" alt="日本美食2"></div>
-        </div>
-        <!-- 在這裡添加更多圖片的HTML標籤 -->
-    </section>
-
+            </div>
+            <div class="con2">
+                <span id="p"></span>
+            </div>
+        </section>
+    </div>
+    <script>
+        function display1() {
+            document.getElementById("p").innerHTML = '<img class = "pic" src="foods/日本食物1.jpg">';
+        }
+        function display2() {
+            document.getElementById("p").innerHTML = '<img class = "pic" src="foods/日本食物2.jpg">';
+        }
+        function display3() {
+            document.getElementById("p").innerHTML = '<img class = "pic" src="foods/日本食物3.jpg">';
+        }
+        function display4() {
+            document.getElementById("p").innerHTML = '<img class = "pic" src="foods/日本食物4.jpg">';
+        }
+        function display5() {
+            document.getElementById("p").innerHTML = '<img class = "pic" src="foods/日本食物5.jpg">';
+        }
+        function nodisplay() {
+            document.getElementById("p").innerHTML = "";
+        }        
+    </script>
 </body>
 
 </html>

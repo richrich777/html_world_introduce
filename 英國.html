@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>英國 - 美食探索</title>
     <style>
-           body {
+        body {
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
@@ -33,7 +33,9 @@
             border-radius: 8px;
         }
 
-        h1, h2, h3 {
+        h1,
+        h2,
+        h3 {
             color: #00A859;
         }
 
@@ -51,21 +53,12 @@
             margin-bottom: 10px;
         }
 
-        img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        .con1 {
+            width: 70%;
         }
 
-        footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #333;
-            color: white;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+        .con2 {
+            width: 30%;
         }
 
         .quote {
@@ -83,11 +76,22 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+
         }
 
-        .flex-item {
-            flex: 1;
-            margin: 10px;
+        .container {
+            flex-direction: row;
+            display: flex;
+        }
+
+        .pic {
+            max-width: 100%;
+            align-items: center;
+            width: 500px;
+            height: 300px;
+            margin-top: 150px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
         @media (max-width: 600px) {
@@ -105,45 +109,66 @@
     </header>
 
     <section>
-        <h2>國家概況</h2>
-        <p>英國，包括英格蘭、蘇格蘭、威爾士和北愛爾蘭，是一個擁有豐富歷史和文化多樣性的國家。從倫敦的標誌性地標到蘇格蘭高地的壯麗風景，英國融合了傳統和現代的獨特風采。</p>
+        <h2>英國</h2>
+        <p>多元化而歷史悠久的國家，擁有悠久的歷史、豐富的文化和獨特的風景。其首都是倫敦，是全球著名的國際城市之一。</p>
+        <p>英格蘭、蘇格蘭、威爾斯和北愛爾蘭各自擁有獨特的文化和傳統，共同形成了英國多元的面貌。英國曾是大英帝國的核心，對全球歷史和文明有著深遠的影響。</p>
+        <p>如今是一個現代化的國家，擁有先進的科技、教育體系和文藝活動，同時保留著悠久的皇室傳統。</p>
     </section>
+    <div>
+        <section class="container">
+            <div class="con1">
+                <h2>美食介紹</h2>
+                <ul>
+                    <li>
+                        <h3 onmouseover="display1()" onmouseout="nodisplay()">英式早餐（Full English Breakfast）</h3>
+                        <p>這是一頓豐盛的早餐，通常包括煎蛋、培根、香腸、黑布丁（一種血腸）、烤蕃茄、蘑菇和烤土司。</p>
+                    </li>
+                    <li>
+                        <h3 onmouseover="display2()" onmouseout="nodisplay()">威爾士燉肉（Welsh Rarebit）</h3>
+                        <p>這是一種使用啤酒和芝士製成的燉肉醬，通常塗在烤麵包上。</p>
+                    </li>
+                    <li>
+                        <h3 onmouseover="display3()" onmouseout="nodisplay()">炸魚薯條（Fish and Chips）</h3>
+                        <p>鮮魚裹上麵粉，油炸至金黃酥脆，搭配炸薯條，再加上蘇打水醬和醋。</p>
+                    </li>
+                    <li>
+                        <h3 onmouseover="display4()" onmouseout="nodisplay()">英式肉派（Cornish Pasty）</h3>
+                        <p>一種便攜式的手持派，通常內餡包含肉、馬鈴薯和蔬菜。</p>
+                    </li>
+                    <li>
+                        <h3 onmouseover="display5()" onmouseout="nodisplay()">英式下午茶（Afternoon Tea）</h3>
+                        <p>這是一種傳統的英式習俗，包括茶和各種小吃，如三明治、糕點和水果。</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="con2">
+                <span id="p"></span>
+            </div>
+        </section>
 
-    <section>
-        <h2>美食介紹</h2>
-        <ul>
-            <li>
-                <h3>英式早餐</h3>
-                <p>以豐盛的英式早餐開啟一天，包括雞蛋、培根、香腸、番茄等。這是英國人早晨的經典享受。</p>
-            </li>
-            <li>
-                <h3>炸魚薯條</h3>
-                <p>沉浸在經典的英式炸魚薯條中，脆皮炸魚搭配金黃薯條，無論在海邊小鎮還是繁忙都市，都是美味的代表。</p>
-            </li>
-            <li>
-                <h3>下午茶</h3>
-                <p>品味優雅的英式下午茶，包括司康餅、奶油、手指三明治和各種茶類。這是彰顯英國精緻的傳統。</p>
-            </li>
-        </ul>
-    </section>
+        </section>
+    </div>
 
-    <section>
-        <h2>文化亮點</h2>
-        <p>沉浸在英國豐富多樣的文化中。參觀古老的城堡，欣賞莎士比亞的劇作，見證皇家典禮的壯觀。</p>
-        <p>從披頭四到莎士比亞，英國在音樂、文學和藝術方面都有顯著的貢獻。</p>
-    </section>
-
-    <section>
-        <h2>圖片集</h2>
-        <p>展示英國美麗的風景和令人垂涎的美食。</p>
-        <div class="flex-container">
-            <div class="flex-item"><img src="https://placekitten.com/800/600" alt="英國風景"></div>
-            <div class="flex-item"><img src="https://placekitten.com/800/601" alt="英式早餐"></div>
-            <div class="flex-item"><img src="https://placekitten.com/800/602" alt="炸魚薯條"></div>
-        </div>
-        <!-- 在這裡添加更多圖片的HTML標籤 -->
-    </section>
-
+    <script>
+        function display1() {
+            document.getElementById("p").innerHTML = '<img class = "pic" src="foods/英國食物1.jpg">';
+        }
+        function display2() {
+            document.getElementById("p").innerHTML = '<img class = "pic" src="foods/英國食物2.jpg">';
+        }
+        function display3() {
+            document.getElementById("p").innerHTML = '<img class = "pic" src="foods/英國食物3.jpg">';
+        }
+        function display4() {
+            document.getElementById("p").innerHTML = '<img class = "pic" src="foods/英國食物4.jpg">';
+        }
+        function display5() {
+            document.getElementById("p").innerHTML = '<img class = "pic" src="foods/英國食物5.jpg">';
+        }
+        function nodisplay() {
+            document.getElementById("p").innerHTML = "";
+        }        
+    </script>
 </body>
 
 </html>

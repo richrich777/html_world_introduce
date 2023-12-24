@@ -15,6 +15,10 @@
         }
 
         header {
+            position: relative;
+            background-image: url("landmark/台灣1.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
             text-align: center;
             padding: 20px;
             background-color: #5B7F9E;
@@ -33,7 +37,9 @@
             border-radius: 8px;
         }
 
-        h1, h2, h3 {
+        h1,
+        h2,
+        h3 {
             color: #5B7F9E;
         }
 
@@ -51,26 +57,27 @@
             margin-bottom: 10px;
         }
 
-        img {
+        .container {
+            flex-direction: row;
+            display: flex;
+        }
+
+        .con1 {
+            width: 70%;
+        }
+
+        .con2 {
+            width: 30%;
+        }
+
+        .pic {
             max-width: 100%;
-            height: auto;
+            align-items: center;
+            width: 500px;
+            height: 300px;
+            margin-top: 150px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #333;
-            color: white;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-
-        .quote {
-            font-style: italic;
-            color: #888;
         }
 
         .highlight {
@@ -94,6 +101,13 @@
             .flex-container {
                 flex-direction: column;
             }
+
+            .pic {
+                align-items: center;
+                width: auto;
+                height: auto;
+                margin-top: 150px;
+            }
         }
     </style>
 </head>
@@ -105,47 +119,63 @@
     </header>
 
     <section>
-        <h2>國家概況</h2>
+        <h2>台灣</h2>
         <p>台灣，正式稱為中華民國，位於亞洲東部，擁有多樣的地形和氣候。這個小島以其美麗的自然景觀、豐富的歷史和獨特的文化而聞名。</p>
         <p>台灣是一個融合傳統和現代的社會，擁有繁榮的都市、古老的寺廟和美麗的海灣。人們熱情好客，飲食文化豐富多樣。</p>
     </section>
 
-    <section>
-        <h2>美食介紹</h2>
-        <p>探索台灣的美食，品嚐當地獨特的風味。</p>
-        <ul>
-            <li>
-                <h3>小吃</h3>
-                <p>台灣小吃種類繁多，包括臭豆腐、蚵仔煎、肉圓、鹹酥雞等。夜市是品嚐地道台灣小吃的絕佳場所。</p>
-            </li>
-            <li>
-                <h3>珍珠奶茶</h3>
-                <p>台灣是珍珠奶茶的發源地，享受著茶香和Q彈的珍珠，是台灣人生活中不可或缺的一部分。各種口味和變化多端的飲品讓人愛不釋手。</p>
-            </li>
-            <li>
-                <h3>台式熱炒</h3>
-                <p>台灣的熱炒菜色豐富，有麻辣火鍋、宮保雞丁等。這種獨特的烹飪風格讓每一道菜都充滿風味。</p>
-            </li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>文化特色</h2>
-        <p>台灣的文化充滿多元性，融合了中國傳統文化、原住民文化和現代藝術。古老的寺廟、傳統戲曲和熱鬧的廟會都反映了台灣豐富的文化底蘊。</p>
-        <p>台灣也以其獨特的節慶和活動而聞名，如台灣燈會、中元普渡和農曆新年慶祝活動。每一個節慶都有其特殊的傳統慶祝方式。</p>
-    </section>
-
-    <section>
-        <h2>圖片集</h2>
-        <p>展示台灣的美麗風景和令人垂涎的美食圖片。</p>
-        <div class="flex-container">
-            <div class="flex-item"><img src="https://placekitten.com/800/600" alt="台灣美麗風景"></div>
-            <div class="flex-item"><img src="https://placekitten.com/800/601" alt="台灣美食1"></div>
-            <div class="flex-item"><img src="https://placekitten.com/800/602" alt="台灣美食2"></div>
-        </div>
-        <!-- 在這裡添加更多圖片的HTML標籤 -->
-    </section>
-
+    <div>
+        <section class="container">
+            <div class="con1">
+                <h2>美食介紹</h2>
+                <ul>
+                    <li>
+                        <h3 onmouseover="display1()" onmouseout="nodisplay()">臭豆腐</h3>
+                        <p>一種發酵過的豆腐，經過特殊處理製成，有獨特的氣味和口感。</p>
+                    </li>
+                    <li>
+                        <h3 onmouseover="display2()" onmouseout="nodisplay()">蚵仔煎</h3>
+                        <p>用蚵仔與蛋漿混合而成的煎餅，表面酥脆，內裡帶有嫩滑的口感。</p>
+                    </li>
+                    <li>
+                        <h3 onmouseover="display3()" onmouseout="nodisplay()">牛肉麵</h3>
+                        <p>這是一道傳統的台灣料理，以醇厚的牛肉湯底和彈牙的牛肉片為特色，搭配麵條，是台灣人愛吃的主食之一。</p>
+                    </li>
+                    <li>
+                        <h3 onmouseover="display4()" onmouseout="nodisplay()">珍珠奶茶</h3>
+                        <p>台灣是珍珠奶茶的發源地，享受著茶香和Q彈的珍珠，是台灣人生活中不可或缺的一部分。各種口味和變化多端的飲品讓人愛不釋手。</p>
+                    </li>
+                    <li>
+                        <h3 onmouseover="display5()" onmouseout="nodisplay()">鹽酥雞</h3>
+                        <p>雞塊裹上鹽酥粉製成，表皮酥脆，內裡多汁，是台灣夜市中的經典小吃之一。</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="con2">
+                <span id="p"></span>
+            </div>
+        </section>
+    </div>
+    <script>
+        function display1() {
+            document.getElementById("p").innerHTML = '<img class = "pic" src="foods/台灣食物1.jpg">';
+        }
+        function display2() {
+            document.getElementById("p").innerHTML = '<img class = "pic" src="foods/台灣食物2.jpg">';
+        }
+        function display3() {
+            document.getElementById("p").innerHTML = '<img class = "pic" src="foods/台灣食物3.jpg">';
+        }
+        function display4() {
+            document.getElementById("p").innerHTML = '<img class = "pic" src="foods/台灣食物4.jpg">';
+        }
+        function display5() {
+            document.getElementById("p").innerHTML = '<img class = "pic" src="foods/台灣食物5.jpg">';
+        }
+        function nodisplay() {
+            document.getElementById("p").innerHTML = "";
+        }        
+    </script>
 </body>
 
 </html>

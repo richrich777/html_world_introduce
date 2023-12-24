@@ -53,28 +53,6 @@
             margin-bottom: 10px;
         }
 
-        img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #333;
-            color: white;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-
-        .quote {
-            font-style: italic;
-            color: #888;
-        }
-
         .highlight {
             background-color: #FFFFE0;
             padding: 5px;
@@ -90,6 +68,29 @@
         .flex-item {
             flex: 1;
             margin: 10px;
+        }
+
+        .container {
+            flex-direction: row;
+            display: flex;
+        }
+
+        .pic {
+            max-width: 100%;
+            align-items: center;
+            width: 500px;
+            height: 300px;
+            margin-top: 150px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .con1 {
+            width: 70%;
+        }
+
+        .con2 {
+            width: 30%;
         }
 
         @media (max-width: 600px) {
@@ -114,52 +115,73 @@
         <p>足球在阿根廷是一門真正的宗教。這裡孕育了無數優秀的足球選手，並且足球比賽是人們生活中的重要部分。每當球賽進行，整個城市都充滿了激情和歡呼聲。</p>
     </section>
 
-    <section>
-        <h2>美食介紹</h2>
-        <ul>
-            <li>
-                <h3>烤肉（Asado）</h3>
-                <p>烤肉是阿根廷最具代表性的美食之一。以牛肉為主，使用特製的調味料，如鹽、胡椒和香草，然後在慢火上烤製。這種烤肉方式保留了肉質的鮮嫩和風味。</p>
-            </li>
-            
-            <li>
-                <h3>阿根廷燉肉鍋（Puchero）</h3>
-                <p>Puchero是一道豐富的燉菜，包括牛肉、豬肉、雞肉、蔬菜和豆類，搭配玉米、南瓜和馬鈴薯。這是一道充滿營養的傳統菜餚，常常在冷天食用。</p>
-            </li>
-            
-            <li>
-                <h3>探戈醃牛肉（Matambre a la Pizza）</h3>
-                <p>這是一道將牛肉用探戈醃製後放在比薩餅上烤製而成的美食。探戈醃料包括辣椒、大蒜和香草，賦予牛肉獨特的風味。</p>
-            </li>
-            
-            <li>
-                <h3>香煎乳酪（Provoleta）</h3>
-                <p>這是一道傳統的阿根廷開胃小吃，通常使用半硬質奶酪，撒上辣椒和香草，然後在烤盤上烤至金黃。食用時，乳酪會保持濕潤且帶有濃厚的奶香。</p>
-            </li>
-            
-            <li>
-                <h3>馬黛茶（Mate）</h3>
-                <p>馬黛茶是阿根廷人的日常飲品，也是一種社交和共享的習俗。這種飲品由特殊的茶葉製成，用一種特殊的杯子（mate）和吸管（bombilla）來享用。馬黛茶具有濃厚的草本風味，是阿根廷人生活方式的一部分。</p>
-            </li>
-            
-            <li>
-                <h3>阿根廷餡餅（Empanadas）</h3>
-                <p>阿根廷餡餅是一種半月形的餡餅，內部包裹著各種餡料，如牛肉、雞肉、蔬菜或奶酪。這是一種受歡迎的小吃，常見於街頭攤販和節慶。</p>
-            </li>
-            
-        </ul>
-    </section>
+    <div>
+        <section class="container">
+            <div class="con1">
+                <h2>美食介紹</h2>
+                <ul>
+                    <li>
+                        <h3 onmouseover="display1()" onmouseout="nodisplay()">烤肉（Asado）</h3>
+                        <p>烤肉是阿根廷最具代表性的美食之一。以牛肉為主，使用特製的調味料，如鹽、胡椒和香草，然後在慢火上烤製。這種烤肉方式保留了肉質的鮮嫩和風味。</p>
+                    </li>
 
-    <section>
-        <h2>圖片集</h2>
-        <p>展示國家名的美麗風景和令人垂涎的美食圖片。</p>
-        <div class="flex-container">
-            <div class="flex-item"><img src="https://placekitten.com/800/600" alt="美麗風景"></div>
-            <div class="flex-item"><img src="https://placekitten.com/800/601" alt="美食1"></div>
-            <div class="flex-item"><img src="https://placekitten.com/800/602" alt="美食2"></div>
-        </div>
-        <!-- 在這裡添加更多圖片的HTML標籤 -->
-    </section>
+                    <li>
+                        <h3 onmouseover="display2()" onmouseout="nodisplay()">阿根廷燉肉鍋（Puchero）</h3>
+                        <p>Puchero是一道豐富的燉菜，包括牛肉、豬肉、雞肉、蔬菜和豆類，搭配玉米、南瓜和馬鈴薯。這是一道充滿營養的傳統菜餚，常常在冷天食用。</p>
+                    </li>
+
+                    <li >
+                        <h3 onmouseover="display3()" onmouseout="nodisplay()">探戈醃牛肉（Matambre a la Pizza）</h3>
+                        <p>這是一道將牛肉用探戈醃製後放在比薩餅上烤製而成的美食。探戈醃料包括辣椒、大蒜和香草，賦予牛肉獨特的風味。</p>
+                    </li>
+
+                    <li>
+                        <h3 onmouseover="display4()" onmouseout="nodisplay()">香煎乳酪（Provoleta）</h3>
+                        <p>這是一道傳統的阿根廷開胃小吃，通常使用半硬質奶酪，撒上辣椒和香草，然後在烤盤上烤至金黃。食用時，乳酪會保持濕潤且帶有濃厚的奶香。</p>
+                    </li>
+
+                    <li>
+                        <h3 onmouseover="display5()" onmouseout="nodisplay()">馬黛茶（Mate）</h3>
+                        <p>馬黛茶是阿根廷人的日常飲品，也是一種社交和共享的習俗。這種飲品由特殊的茶葉製成，用一種特殊的杯子（mate）和吸管（bombilla）來享用。馬黛茶具有濃厚的草本風味，是阿根廷人生活方式的一部分。
+                        </p>
+                    </li>
+
+                    <li>
+                        <h3 onmouseover="display6()" onmouseout="nodisplay()">阿根廷餡餅（Empanadas）</h3>
+                        <p>阿根廷餡餅是一種半月形的餡餅，內部包裹著各種餡料，如牛肉、雞肉、蔬菜或奶酪。這是一種受歡迎的小吃，常見於街頭攤販和節慶。</p>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="con2">
+                <span id="p"></span>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        function display1() {
+            document.getElementById("p").innerHTML = '<img class = "pic" src="foods/阿根廷食物1.jpg">';
+        }
+        function display2() {
+            document.getElementById("p").innerHTML = '<img class = "pic" src="foods/阿根廷食物2.jpg">';
+        }
+        function display3() {
+            document.getElementById("p").innerHTML = '<img class = "pic" src="foods/阿根廷食物3.jpg">';
+        }
+        function display4() {
+            document.getElementById("p").innerHTML = '<img class = "pic" src="foods/阿根廷食物4.jpg">';
+        }
+        function display5() {
+            document.getElementById("p").innerHTML = '<img class = "pic" src="foods/阿根廷食物5.jpg">';
+        }
+        function display6() {
+            document.getElementById("p").innerHTML = '<img class = "pic" src="foods/阿根廷食物6.jpg">';
+        }        
+        function nodisplay() {
+            document.getElementById("p").innerHTML = "";
+        }        
+    </script>
 </body>
 
 </html>

@@ -44,6 +44,29 @@
             color: #555;
         }
 
+        .container {
+            flex-direction: row;
+            display: flex;
+        }
+
+        .pic {
+            max-width: 100%;
+            align-items: center;
+            width: 500px;
+            height: 300px;
+            margin-top: 150px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .con1 {
+            width: 70%;
+        }
+
+        .con2 {
+            width: 30%;
+        }
+
         ul {
             list-style-type: none;
             padding: 0;
@@ -51,28 +74,6 @@
 
         li {
             margin-bottom: 10px;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #333;
-            color: white;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-
-        .quote {
-            font-style: italic;
-            color: #888;
         }
 
         .highlight {
@@ -107,7 +108,7 @@
     </header>
 
     <section>
-        <h2>國家概況與文化</h2>
+        <h2>加拿大</h2>
         <p>
             加拿大，坐落於北美洲，以其廣袤的土地和壯麗的自然風光而聞名。渥太華是這個國家的首都，
             而多倫多和蒙特婁則是其最大的城市，分別散發著現代和歷史的魅力。加拿大人口多元，融匯了各種文化，
@@ -116,46 +117,58 @@
         <p>加拿大以其對環境的保護、多元文化的推崇和社會福祉體系而引人矚目，是一個兼具現代化和自然之美的國度。</p>
     </section>
 
-    <section>
-        <ul>
-            <li>
-                <h3>蒙特婁燻肉三明治（Montreal Smoked Meat Sandwich）</h3>
-                <p>這是一道經典的蒙特婁特色美食，通常由燻牛肉、麥片麵包和芥末組成。這種三明治在蒙特婁的猶太餐廳中非常受歡迎。</p>
-            </li>
-            <li>
-                <h3>普丁（Poutine）</h3>
-                <p>這是一道來自魁北克省的傳統美食，由薯條、奶酪和熱倒上的肉汁構成。它是一道美味、豐富的小吃，也有各種不同的變化，如加入肉類、蔬菜等。</p>
-            </li>
-            <li>
-                <h3>紅豆餅（Butter Tarts）</h3>
-                <p>這是一種甜點，包括黃糖、黃油和蛋的混合物，放在薄皮中烘烤而成。它們非常甜蜜，是加拿大傳統的糕點之一。</p>
-            </li>
-            <li>
-                <h3>尼亞加拉葡萄酒</h3>
-                <p>尼亞加拉地區是加拿大最著名的葡萄酒產區之一。這裡生產的冰酒尤為有名，而且紅葡萄酒和白葡萄酒的質量也很高。</p>
-            </li>
-            <li>
-                <h3>魁北克肉餡餅（Tourtière）</h3>
-                <p>這是一種傳統的魁北克肉餡餅，通常包括豬肉、牛肉和香料。這是聖誕節和其他特殊場合時的傳統菜肴。</p>
-            </li>
-            <li>
-                <h3>馬格尼塔島牡蠣（Malpeque Oysters）</h3>
-                <p>加拿大東海岸有一些著名的牡蠣產區，其中馬格尼塔島的牡蠣以其鮮美的味道和獨特的風味而聞名。</p>
-            </li>
-        </ul>
-        
-    </section>
-
-    <section>
-        <h2>圖片集</h2>
-        <p>展示國家名的美麗風景和令人垂涎的美食圖片。</p>
-        <div class="flex-container">
-            <div class="flex-item"><img src="https://placekitten.com/800/600" alt="美麗風景"></div>
-            <div class="flex-item"><img src="https://placekitten.com/800/601" alt="美食1"></div>
-            <div class="flex-item"><img src="https://placekitten.com/800/602" alt="美食2"></div>
-        </div>
-        <!-- 在這裡添加更多圖片的HTML標籤 -->
-    </section>
+    <div>
+        <section class="container">
+            <div class="con1">
+                <h2>美食介紹</h2>
+                <ul>
+                    <li>
+                        <h3 onmouseover="display1()" onmouseout="nodisplay()">蒙特婁燻肉三明治（Montreal Smoked Meat Sandwich）</h3>
+                        <p>這是一道經典的蒙特婁特色美食，通常由燻牛肉、麥片麵包和芥末組成。這種三明治在蒙特婁的猶太餐廳中非常受歡迎。</p>
+                    </li>
+                    <li>
+                        <h3 onmouseover="display2()" onmouseout="nodisplay()">普丁（Poutine）</h3>
+                        <p>這是一道來自魁北克省的傳統美食，由薯條、奶酪和熱倒上的肉汁構成。它是一道美味、豐富的小吃，也有各種不同的變化，如加入肉類、蔬菜等。</p>
+                    </li>
+                    <li>
+                        <h3 onmouseover="display3()" onmouseout="nodisplay()">紅豆餅（Butter Tarts）</h3>
+                        <p>這是一種甜點，包括黃糖、黃油和蛋的混合物，放在薄皮中烘烤而成。它們非常甜蜜，是加拿大傳統的糕點之一。</p>
+                    </li>
+                    <li>
+                        <h3 onmouseover="display4()" onmouseout="nodisplay()">魁北克肉餡餅（Tourtière）</h3>
+                        <p>這是一種傳統的魁北克肉餡餅，通常包括豬肉、牛肉和香料。這是聖誕節和其他特殊場合時的傳統菜肴。</p>
+                    </li>
+                    <li>
+                        <h3 onmouseover="display5()" onmouseout="nodisplay()">蒙特利爾貝果（Montreal Bagels）</h3>
+                        <p>蒙特利爾風格的貝果相比紐約貝果而言，口感更加甜蜜，外層更加酥脆。</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="con2">
+                <span id="p"></span>
+            </div>
+        </section>
+    </div>
+    <script>
+        function display1() {
+            document.getElementById("p").innerHTML = '<img class = "pic" src="foods/加拿大食物1.jpg">';
+        }
+        function display2() {
+            document.getElementById("p").innerHTML = '<img class = "pic" src="foods/加拿大食物2.jpg">';
+        }
+        function display3() {
+            document.getElementById("p").innerHTML = '<img class = "pic" src="foods/加拿大食物3.jpg">';
+        }
+        function display4() {
+            document.getElementById("p").innerHTML = '<img class = "pic" src="foods/加拿大食物4.jpg">';
+        }
+        function display5() {
+            document.getElementById("p").innerHTML = '<img class = "pic" src="foods/加拿大食物5.jpg">';
+        }
+        function nodisplay() {
+            document.getElementById("p").innerHTML = "";
+        }        
+    </script>
 </body>
 
 </html>

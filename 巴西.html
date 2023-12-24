@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>巴西 - 美食探索</title>
     <style>
-        body {          
+        body {
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
@@ -52,32 +52,33 @@
             margin-bottom: 10px;
         }
 
-        img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #333;
-            color: white;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-
-        .quote {
-            font-style: italic;
-            color: #888;
-        }
-
         .highlight {
             background-color: #FFFFE0;
             padding: 5px;
             border-radius: 4px;
+        }
+
+        .container {
+            flex-direction: row;
+            display: flex;
+        }
+
+        .pic {
+            max-width: 100%;
+            align-items: center;
+            width: 500px;
+            height: 300px;
+            margin-top: 150px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .con1 {
+            width: 70%;
+        }
+
+        .con2 {
+            width: 30%;
         }
 
         .flex-container {
@@ -106,52 +107,70 @@
     </header>
 
     <section>
-        <h2>國家概況與文化</h2>
+        <h2>巴西</h2>
         <p>巴西，南美洲之巨，以其廣袤的亞馬遜雨林、壯觀的伊瓜蘇瀑布和繁華的城市聞名。首都巴西利亞現代建築矗立，而里約熱內盧和聖保羅則是文化盛事的代表。</p>
         <p>人口多元，歐洲、非洲和原住民文化交匯，展現出豐富多彩的音樂、舞蹈和節慶。巴西足球風靡全球，成為國家驕傲。</p>
     </section>
 
-    <section>
-        <h2>美食介紹</h2>
-        <ul>
-            <li>
-                <h3>烤肉（Churrasco）</h3>
-                <p>巴西烤肉是一道世界著名的料理，主要以各種肉類如牛肉、豬肉和家禽，使用特製的調味料和炭火烹烤而成。這種風格的烤肉通常在特別的聚餐或節慶中享用。</p>
-            </li>
-            <li>
-                <h3>黑色豆子燉飯（Feijoada）</h3>
-                <p>Feijoada是巴西的國民菜，由黑色豆子、豬肉、香腸和牛肉等食材製成。這道濃郁的燉飯常常伴隨著橙子片和蔬菜一同享用，味道豐富而美味。</p>
-            </li>
-            <li>
-                <h3>阿卡伊果醬碗（Açaí Bowl）</h3>
-                <p>阿卡伊碗是一種健康且受歡迎的巴西早餐或點心。以阿卡伊浆、各種新鮮水果、堅果和糖漿搭配而成，提供豐富的營養和美味。</p>
-            </li>
-            <li>
-                <h3>卡斯巴（Coxinha）</h3>
-                <p>Coxinha是一種小吃，呈雞腿形狀，內部包裹著味道濃郁的雞肉或其他餡料，外皮酥脆，是流行的街頭食物之一。</p>
-            </li>
-            <li>
-                <h3>巴西奶酪球（Pão de Queijo）</h3>
-                <p>這是一種受歡迎的小吃，由奶酪、麵粉和牛奶製成。這些球狀的麵點外皮酥脆，內部濕潤、彈牙，是巴西人喜愛的早餐或點心。</p>
-            </li>
-            <li>
-                <h3>貝伊哈（Beiju）</h3>
-                <p>Beiju是一種由樹薯澱粉製成的薄脆餅，通常搭配椰子、巧克力或其他配料。這種輕食在巴西的沿海地區很受歡迎。</p>
-            </li>
-        </ul>
-
-    </section>
-
-    <section>
-        <h2>圖片集</h2>
-        <p>展示國家名的美麗風景和令人垂涎的美食圖片。</p>
-        <div class="flex-container">
-            <div class="flex-item"><img src="https://placekitten.com/800/600" alt="美麗風景"></div>
-            <div class="flex-item"><img src="https://placekitten.com/800/601" alt="美食1"></div>
-            <div class="flex-item"><img src="https://placekitten.com/800/602" alt="美食2"></div>
-        </div>
-        <!-- 在這裡添加更多圖片的HTML標籤 -->
-    </section>
+    <div>
+        <section class="container">
+            <div class="con1">
+                <h2>美食介紹</h2>
+                <ul>
+                    <li>
+                        <h3 onmouseover="display1()" onmouseout="nodisplay()">烤肉（Churrasco）</h3>
+                        <p>巴西烤肉是一道世界著名的料理，主要以各種肉類如牛肉、豬肉和家禽，使用特製的調味料和炭火烹烤而成。這種風格的烤肉通常在特別的聚餐或節慶中享用。</p>
+                    </li>
+                    <li>
+                        <h3 onmouseover="display2()" onmouseout="nodisplay()">黑色豆子燉飯（Feijoada）</h3>
+                        <p>Feijoada是巴西的國民菜，由黑色豆子、豬肉、香腸和牛肉等食材製成。這道濃郁的燉飯常常伴隨著橙子片和蔬菜一同享用，味道豐富而美味。</p>
+                    </li>
+                    <li>
+                        <h3 onmouseover="display3()" onmouseout="nodisplay()">阿卡伊果醬碗（Açaí Bowl）</h3>
+                        <p>阿卡伊碗是一種健康且受歡迎的巴西早餐或點心。以阿卡伊浆、各種新鮮水果、堅果和糖漿搭配而成，提供豐富的營養和美味。</p>
+                    </li>
+                    <li>
+                        <h3 onmouseover="display4()" onmouseout="nodisplay()">卡斯巴（Coxinha）</h3>
+                        <p>Coxinha是一種小吃，呈雞腿形狀，內部包裹著味道濃郁的雞肉或其他餡料，外皮酥脆，是流行的街頭食物之一。</p>
+                    </li>
+                    <li>
+                        <h3 onmouseover="display5()" onmouseout="nodisplay()">巴西奶酪球（Pão de Queijo）</h3>
+                        <p>這是一種受歡迎的小吃，由奶酪、麵粉和牛奶製成。這些球狀的麵點外皮酥脆，內部濕潤、彈牙，是巴西人喜愛的早餐或點心。</p>
+                    </li>
+                    <li>
+                        <h3 onmouseover="display6()" onmouseout="nodisplay()">貝伊哈（Beiju）</h3>
+                        <p>Beiju是一種由樹薯澱粉製成的薄脆餅，通常搭配椰子、巧克力或其他配料。這種輕食在巴西的沿海地區很受歡迎。</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="con2">
+                <span id="p"></span>
+            </div>
+        </section>
+    </div>
+    <script>
+        function display1() {
+            document.getElementById("p").innerHTML = '<img class = "pic" src="foods/巴西食物1.jpg">';
+        }
+        function display2() {
+            document.getElementById("p").innerHTML = '<img class = "pic" src="foods/巴西食物2.jpg">';
+        }
+        function display3() {
+            document.getElementById("p").innerHTML = '<img class = "pic" src="foods/巴西食物3.jpg">';
+        }
+        function display4() {
+            document.getElementById("p").innerHTML = '<img class = "pic" src="foods/巴西食物4.jpg">';
+        }
+        function display5() {
+            document.getElementById("p").innerHTML = '<img class = "pic" src="foods/巴西食物5.jpg">';
+        }
+        function display6() {
+            document.getElementById("p").innerHTML = '<img class = "pic" src="foods/巴西食物6.jpg">';
+        }        
+        function nodisplay() {
+            document.getElementById("p").innerHTML = "";
+        }        
+    </script>
 </body>
 
 </html>

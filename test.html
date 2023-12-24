@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>左右圖片漸層</title>
+    <style>
+        .image-container {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            overflow: hidden;
+        }
+
+
+        .gradient-overlay-right {
+            position: absolute;
+            top: 0;
+            height: 100%;
+            width: 50%;
+            background: linear-gradient(to left, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
+        }
+
+        .gradient-overlay-left
+        {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 50%;
+        background: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
+        }
+
+        .gradient-overlay-right {
+            left: 50%;
+        }
+
+        .image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="image-container">
+        <div class="gradient-overlay-right"></div>
+        <div class="gradient-overlay-left"></div>
+        <img class="image" src="landmark/台灣1.jpg" alt="Your Image">
+    </div>
+</body>
+
+</html>

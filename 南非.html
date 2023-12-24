@@ -53,28 +53,6 @@
             margin-bottom: 10px;
         }
 
-        img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #333;
-            color: white;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-
-        .quote {
-            font-style: italic;
-            color: #888;
-        }
-
         .highlight {
             background-color: #FFFFE0;
             padding: 5px;
@@ -92,6 +70,29 @@
             margin: 10px;
         }
 
+        .pic {
+            max-width: 100%;
+            align-items: center;
+            width: 500px;
+            height: 300px;
+            margin-top: 150px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            flex-direction: row;
+            display: flex;
+        }
+
+        .con1 {
+            width: 70%;
+        }
+
+        .con2 {
+            width: 30%;
+        }
+
         @media (max-width: 600px) {
             .flex-container {
                 flex-direction: column;
@@ -107,7 +108,7 @@
     </header>
 
     <section>
-        <h2>國家概況與文化</h2>
+        <h2>南非</h2>
         <p>南非，位於非洲大陸的南端，以其多樣性而著稱，擁有迷人的地理風景和豐富的野生動植物。
             首都比勒陀利亞和立法首都開普敦展現了行政與文化的多元性，而經濟中心約翰內斯堡則是這個國家最大的城市。</p>
         <p>南非人口多元，包括不同種族、語言和文化的群體，反映了其複雜的歷史。這個國家以其獨特的社會發展和多元文化而聞名，
@@ -115,39 +116,52 @@
         <p>南非的文化豐富多彩，融合了傳統和現代元素，這在藝術、音樂、舞蹈和文學等方面都有所體現。</p>
     </section>
 
-    <section>
-        <h2>美食介紹</h2>
-        <ul>
-            <li>
-                <h3>博卡薩菜（Bobotie）</h3>
-                <p>博卡薩菜是一道具有南非色彩的美食，以香氣四溢的咖哩調味的烤肉末為特色，再加上麵包屑、水果和蛋液。烹飪過程包括烘烤，呈現出美味的金黃色澤。</p>
-            </li>
-            <li>
-                <h3>布雷德布爾（Bredie）</h3>
-                <p>布雷德布爾是一道濃郁的燉菜，主要由肉類（如羊肉或牛肉）、蔬菜和香料組成。這道菜具有豐富的口味，經常搭配飯或麵食一同享用。</p>
-            </li>
-            <li>
-                <h3>班蛇（Bunny Chow）</h3>
-                <p>班蛇是一種獨特的街頭食物，將咖哩燉菜放入中空的麵包中。這種創意十足的料理起源於印度社區，成為了南非當地人喜愛的快餐之一。</p>
-            </li>
-            <li>
-                <h3>燒烤（Braai）</h3>
-                <p>燒烤是南非人熱愛的烹飪方式，常見的燒烤食材包括各種肉類、香腸和蔬菜。這種烹飪風格強調社交和家庭聚會的重要性。</p>
-            </li>
-        </ul>
-        
-    </section>
+    <div>
+        <section class="container">
+            <div class="con1">
+                <h2>美食介紹</h2>
+                <ul>
+                    <li>
+                        <h3 onmouseover="display1()" onmouseout="nodisplay()">牛肉咖哩砂鍋（Bobotie）</h3>
+                        <p>牛肉咖哩砂鍋是一道具有南非色彩的美食，以香氣四溢的咖哩調味的烤肉末為特色，再加上麵包屑、水果和蛋液。烹飪過程包括烘烤，呈現出美味的金黃色澤。</p>
+                    </li>
+                    <li>
+                        <h3 onmouseover="display2()" onmouseout="nodisplay()">布雷德布爾（Bredie）</h3>
+                        <p>布雷德布爾是一道濃郁的燉菜，主要由肉類（如羊肉或牛肉）、蔬菜和香料組成。這道菜具有豐富的口味，經常搭配飯或麵食一同享用。</p>
+                    </li>
+                    <li>
+                        <h3 onmouseover="display3()" onmouseout="nodisplay()">班蛇（Bunny Chow）</h3>
+                        <p>班蛇是一種獨特的街頭食物，將咖哩燉菜放入中空的麵包中。這種創意十足的料理起源於印度社區，成為了南非當地人喜愛的快餐之一。</p>
+                    </li>
+                    <li>
+                        <h3 onmouseover="display4()" onmouseout="nodisplay()">燒烤（Braai）</h3>
+                        <p>燒烤是南非人熱愛的烹飪方式，常見的燒烤食材包括各種肉類、香腸和蔬菜。這種烹飪風格強調社交和家庭聚會的重要性。</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="con2">
+                <span id="p"></span>
+            </div>
+        </section>
+    </div>
 
-    <section>
-        <h2>圖片集</h2>
-        <p>展示國家名的美麗風景和令人垂涎的美食圖片。</p>
-        <div class="flex-container">
-            <div class="flex-item"><img src="https://placekitten.com/800/600" alt="美麗風景"></div>
-            <div class="flex-item"><img src="https://placekitten.com/800/601" alt="美食1"></div>
-            <div class="flex-item"><img src="https://placekitten.com/800/602" alt="美食2"></div>
-        </div>
-        <!-- 在這裡添加更多圖片的HTML標籤 -->
-    </section>
+    <script>
+        function display1() {
+            document.getElementById("p").innerHTML = '<img class = "pic" src="foods/南非食物1.jpg">';
+        }
+        function display2() {
+            document.getElementById("p").innerHTML = '<img class = "pic" src="foods/南非食物2.jpg">';
+        }
+        function display3() {
+            document.getElementById("p").innerHTML = '<img class = "pic" src="foods/南非食物3.jpg">';
+        }
+        function display4() {
+            document.getElementById("p").innerHTML = '<img class = "pic" src="foods/南非食物4.jpg">';
+        }
+        function nodisplay() {
+            document.getElementById("p").innerHTML = "";
+        }        
+    </script>
 </body>
 
 </html>

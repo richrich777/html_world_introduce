@@ -53,28 +53,6 @@
             margin-bottom: 10px;
         }
 
-        img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #333;
-            color: white;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-
-        .quote {
-            font-style: italic;
-            color: #888;
-        }
-
         .highlight {
             background-color: #FFFFE0;
             padding: 5px;
@@ -92,6 +70,29 @@
             margin: 10px;
         }
 
+        .pic {
+            max-width: 100%;
+            align-items: center;
+            width: 500px;
+            height: 300px;
+            margin-top: 150px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            flex-direction: row;
+            display: flex;
+        }
+
+        .con1 {
+            width: 70%;
+        }
+
+        .con2 {
+            width: 30%;
+        }
+
         @media (max-width: 600px) {
             .flex-container {
                 flex-direction: column;
@@ -107,58 +108,68 @@
     </header>
 
     <section>
-        <h2>國家概況與文化</h2>
+        <h2>埃及</h2>
         <p>埃及，位於非洲東北部，是擁有著豐富歷史和文明的國度。其地理位置優越，北臨地中海，東濱紅海，尼羅河貫穿全國，為這片土地帶來肥沃的土壤。</p>
         <p>首都開羅是埃及最大的城市，同時也是保存著吉薩金字塔等世界奇蹟的歷史名城。埃及以其古老的文明而聞名，是地球上最早的文明之一的發源地之一。
             埃及文化深受古代法老王國的影響，表現在建築、藝術、宗教和文學等多個方面。</p>
-        <p>尼羅河對於埃及的農業和生活至關重要，而且埃及的沙漠中也散布著古老的神廟和城市遺址。這片土地承載著無數的傳奇和神秘，成為全球旅行者和歷史愛好者的聖地。</p>    
+        <p>尼羅河對於埃及的農業和生活至關重要，而且埃及的沙漠中也散布著古老的神廟和城市遺址。這片土地承載著無數的傳奇和神秘，成為全球旅行者和歷史愛好者的聖地。</p>
     </section>
 
-    <section>
-        <h2>美食介紹</h2>
-        <ul>
-            <li>
-                <h3>花生醬（Tahini）</h3>
-                <p>由芝麻製成的醬料，通常用於製作多種點心、沙拉和主菜，如哈默薩（Hummus）和巴巴甸努吉（Baba Ganoush）。</p>
-            </li>
-            <li>
-                <h3>法拉夫爾（Falafel）</h3>
-                <p>一種由磨碎的鷹嘴豆製成的丸子，深炸至金黃酥脆。通常搭配麵包、沙拉和醬料，成為經典的素食主食。</p>
-            </li>
-            <li>
-                <h3>馬哈西（Mahshi）</h3>
-                <p>一種將蔬菜如茄子、葫蘆瓜或椰菜包裹肉或米飯的料理，經常搭配番茄醬。</p>
-            </li>
-            <li>
-                <h3>科夫塔（Kofta）</h3>
-                <p>一種調味的肉丸子，通常由羊肉或牛肉製成，經常在烤肉串上烹調，或是作為一道主食搭配麵食。</p>
-            </li>
-            <li>
-                <h3>庫斯庫斯（Kushari）</h3>
-                <p>一道經典的埃及街頭食品，混合了麵食、米飯、小米和豆類，再加上番茄醬和蔬菜，味道豐富。</p>
-            </li>
-            <li>
-                <h3>巴卜（Bab）</h3>
-                <p>一種帶有甜味的點心，通常由麵粉、芝麻、椰子和糖製成，是慶祝節慶或喜慶場合的常見食品。</p>
-            </li>
-            <li>
-                <h3>馬鈴薯蓉（Batates Mekhalela）</h3>
-                <p>馬鈴薯蓉是一道簡單又美味的側菜，通常由馬鈴薯搭配香料、橄欖油和大蒜製成。</p>
-            </li>
-        </ul>
-        
-    </section>
+    <div>
+        <section class="container">
+            <div class="con1">
+                <h2>美食介紹</h2>
+                <ul>
+                    <li>
+                        <h3 onmouseover="display1()" onmouseout="nodisplay()">法拉夫爾（Falafel）</h3>
+                        <p>一種由磨碎的鷹嘴豆製成的丸子，深炸至金黃酥脆。通常搭配麵包、沙拉和醬料，成為經典的素食主食。</p>
+                    </li>
+                    <li>
+                        <h3 onmouseover="display2()" onmouseout="nodisplay()">馬哈西（Mahshi）</h3>
+                        <p>一種將蔬菜如茄子、葫蘆瓜或椰菜包裹肉或米飯的料理，經常搭配番茄醬。</p>
+                    </li>
+                    <li>
+                        <h3 onmouseover="display3()" onmouseout="nodisplay()">科夫塔（Kofta）</h3>
+                        <p>一種調味的肉丸子，通常由羊肉或牛肉製成，經常在烤肉串上烹調，或是作為一道主食搭配麵食。</p>
+                    </li>
+                    <li>
+                        <h3 onmouseover="display4()" onmouseout="nodisplay()">庫斯庫斯（Kushari）</h3>
+                        <p>一道經典的埃及街頭食品，混合了麵食、米飯、小米和豆類，再加上番茄醬和蔬菜，味道豐富。</p>
+                    </li>
+                    <li>
+                        <h3 onmouseover="display5()" onmouseout="nodisplay()">馬鈴薯蓉（Batates Mekhalela）</h3>
+                        <p>馬鈴薯蓉是一道簡單又美味的側菜，通常由馬鈴薯搭配香料、橄欖油和大蒜製成。</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="con2">
+                <span id="p"></span>
+            </div>
+        </section>
 
-    <section>
-        <h2>圖片集</h2>
-        <p>展示國家名的美麗風景和令人垂涎的美食圖片。</p>
-        <div class="flex-container">
-            <div class="flex-item"><img src="https://placekitten.com/800/600" alt="美麗風景"></div>
-            <div class="flex-item"><img src="https://placekitten.com/800/601" alt="美食1"></div>
-            <div class="flex-item"><img src="https://placekitten.com/800/602" alt="美食2"></div>
-        </div>
-        <!-- 在這裡添加更多圖片的HTML標籤 -->
-    </section>
+        </section>
+    </div>
+
+    <script>
+        function display1() {
+            document.getElementById("p").innerHTML = '<img class = "pic" src="foods/埃及食物1.jpg">';
+        }
+        function display2() {
+            document.getElementById("p").innerHTML = '<img class = "pic" src="foods/埃及食物2.jpg">';
+        }
+        function display3() {
+            document.getElementById("p").innerHTML = '<img class = "pic" src="foods/埃及食物3.jpg">';
+        }
+        function display4() {
+            document.getElementById("p").innerHTML = '<img class = "pic" src="foods/埃及食物4.jpg">';
+        }
+        function display5() {
+            document.getElementById("p").innerHTML = '<img class = "pic" src="foods/埃及食物5.jpg">';
+        }
+        function nodisplay() {
+            document.getElementById("p").innerHTML = "";
+        }        
+    </script>
 </body>
 
 </html>

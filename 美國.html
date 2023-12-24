@@ -33,7 +33,9 @@
             border-radius: 8px;
         }
 
-        h1, h2, h3 {
+        h1,
+        h2,
+        h3 {
             color: #4F94CD;
         }
 
@@ -49,28 +51,6 @@
 
         li {
             margin-bottom: 10px;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #333;
-            color: white;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-
-        .quote {
-            font-style: italic;
-            color: #888;
         }
 
         .highlight {
@@ -90,6 +70,29 @@
             margin: 10px;
         }
 
+        .container {
+            flex-direction: row;
+            display: flex;
+        }
+
+        .pic {
+            max-width: 100%;
+            align-items: center;
+            width: 500px;
+            height: 300px;
+            margin-top: 150px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .con1 {
+            width: 70%;
+        }
+
+        .con2 {
+            width: 30%;
+        }
+
         @media (max-width: 600px) {
             .flex-container {
                 flex-direction: column;
@@ -105,49 +108,65 @@
     </header>
 
     <section>
-        <h2>國家概況</h2>
+        <h2>美國</h2>
         <p>美國，通常被稱為「自由之地」，是位於北美洲的一個廣大而多元的國家。以其豐富的歷史、文化大熔爐和標誌性地標而聞名，美國為遊客提供了各種各樣的體驗。</p>
         <p>從紐約和洛杉磯等繁忙城市到大峽谷和黃石等寧靜的風景，美國是一個充滿對比的國度。</p>
     </section>
 
-    <section>
-        <h2>美食介紹</h2>
-        <ul>
-            <li>
-                <h3>燒烤肋骨</h3>
-                <p>燒烤是美式料理的代表，而燒烤肋骨是一個美味的例子。慢烤並裹上酸甜的醬汁，代表了南部各州的風味。</p>
-            </li>
-            <li>
-                <h3>經典漢堡</h3>
-                <p>經典的美式漢堡是快餐文化的象徵。享受多汁的肉餅，搭配各種配料，再加上酥脆的薯條。</p>
-            </li>
-            <li>
-                <h3>紐約風格披薩</h3>
-                <p>沉浸在標誌性的紐約風格披薩中，以其薄餅和豐富的配料而聞名。這是當地人和遊客的最愛。</p>
-            </li>
-        </ul>
-    </section>
+    <div>
+        <section class="container">
+            <div class="con1">
+                <h2>美食介紹</h2>
+                <ul>
+                    <li>
+                        <h3 onmouseover="display1()" onmouseout="nodisplay()">美式漢堡（Hamburger）</h3>
+                        <p>漢堡是美國最經典的快餐之一，通常由牛肉餅夾在麵包中，並配以各種配料如生菜、番茄、洋蔥和醬汁。</p>
+                    </li>
+                    <li>
+                        <h3 onmouseover="display2()" onmouseout="nodisplay()">芝加哥風味披薩（Chicago-style Pizza）</h3>
+                        <p>芝加哥風味的披薩以其厚實的餅皮、豐富的餡料和反轉的烤製方式而聞名。</p>
+                    </li>
+                    <li>
+                        <h3 onmouseover="display3()" onmouseout="nodisplay()">美式早餐（American Breakfast）</h3>
+                        <p>包括培根、饅頭、香腸、荷包蛋和煎薯條等，是一頓豐盛的早餐。</p>
+                    </li>
+                    <li>
+                        <h3 onmouseover="display4()" onmouseout="nodisplay()">紐約芝士蛋糕（New York Cheesecake）</h3>
+                        <p>這是一種口感細緻、滑順的起司蛋糕，是紐約市的經典甜點之一。</p>
+                    </li>
+                    <li>
+                        <h3 onmouseover="display5()" onmouseout="nodisplay()">烤肋排（Barbecue Ribs）</h3>
+                        <p>美國的燒烤文化非常盛行，烤肋排是其中一道經典的燒烤菜肴，塗上特製的烤肉醬，經過慢烤而變得香嫩多汁。</p>
+                    </li>
+                </ul>
 
-    <section>
-        <h2>文化亮點</h2>
-        <p>深入美國多元的文化，從好萊塢的娛樂產業到公民權運動的豐富歷史。</p>
-        <p>參觀博物館，參加音樂節，體驗獨特的美國生活方式。</p>
-    </section>
+            </div>
+            <div class="con2">
+                <span id="p"></span>
+            </div>
+        </section>
+    </div>
 
-    <section>
-        <h2>圖片集</h2>
-        <p>展示美國的美麗風景和令人垂涎的美食圖片。</p>
-        <div class="flex-container">
-            <div class="flex-item"><img src="https://placekitten.com/800/600" alt="美國風景"></div>
-            <div class="flex-item"><img src="https://placekitten.com/800/601" alt="燒烤肋骨"></div>
-            <div class="flex-item"><img src="https://placekitten.com/800/602" alt="經典漢堡"></div>
-        </div>
-        <!-- 在這裡添加更多圖片的HTML標籤 -->
-    </section>
-
-    <footer>
-        <p>&copy; 2023 美國美食探索</p>
-    </footer>
+    <script>
+        function display1() {
+            document.getElementById("p").innerHTML = '<img class = "pic" src="foods/美國食物1.jpg">';
+        }
+        function display2() {
+            document.getElementById("p").innerHTML = '<img class = "pic" src="foods/美國食物2.jpg">';
+        }
+        function display3() {
+            document.getElementById("p").innerHTML = '<img class = "pic" src="foods/美國食物3.jpg">';
+        }
+        function display4() {
+            document.getElementById("p").innerHTML = '<img class = "pic" src="foods/美國食物4.jpg">';
+        }
+        function display5() {
+            document.getElementById("p").innerHTML = '<img class = "pic" src="foods/美國食物5.jpg">';
+        }        
+        function nodisplay() {
+            document.getElementById("p").innerHTML = "";
+        }        
+    </script>
 </body>
 
 </html>

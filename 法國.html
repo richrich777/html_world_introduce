@@ -25,6 +25,29 @@
             font-size: 250%;
         }
 
+        .container {
+            flex-direction: row;
+            display: flex;
+        }
+
+        .pic {
+            max-width: 100%;
+            align-items: center;
+            width: 500px;
+            height: 300px;
+            margin-top: 150px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .con1 {
+            width: 70%;
+        }
+
+        .con2 {
+            width: 30%;
+        }
+
         section {
             margin: 20px;
             padding: 20px;
@@ -51,28 +74,6 @@
 
         li {
             margin-bottom: 10px;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #333;
-            color: white;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-
-        .quote {
-            font-style: italic;
-            color: #888;
         }
 
         .highlight {
@@ -107,61 +108,74 @@
     </header>
 
     <section>
-        <h2>國家概況與文化</h2>
-        <p>法國，位於歐洲西部，以浪漫的巴黎為首都，是一個擁有豐富歷史和文化的國家。
+        <h2>法國</h2>
+        <p>位於歐洲西部，以浪漫的巴黎為首都，是一個擁有豐富歷史和文化的國家。
             這片風景如畫的土地承載著啟蒙時代和法國大革命的歷史，並在文學、藝術、哲學等領域取得卓越成就。</p>
-        <p>法國以其高雅的美食、著名的葡萄酒、時尚潮流和世界著名的博物館聞名於世。其政治體制為共和制，總統和國民議會共同構成政府組織。
+        <p>以高雅的美食、著名的葡萄酒、時尚潮流和世界著名的博物館聞名於世。其政治體制為共和制，總統和國民議會共同構成政府組織。
             在經濟方面，法國是歐洲經濟體系的支柱之一，擁有多元的經濟體系，包括製造業、服務業和農業</p>
         <p>總體而言，法國以其多元的魅力在全球占據著重要地位，吸引著人們對其深厚歷史和文化的探索。</p>
     </section>
 
-    <section>
-        <h2>美食介紹</h2>
-        <ul>
-            <li>
-                <h3>法式麵包</h3>
-                <p>
-                    法國的麵包文化是世界聞名的，而長形的法式麵包（Baguette）更是法國餐桌上的經典之一。
-                    它外脆內軟，是法國人日常生活中不可或缺的食物。</p>
-            </li>
-            <li>
-                <h3>奶油餅乾</h3>
-                <p>起源於奧斯曼帝國的餅乾，經過法國改良成現在大家熟悉的奶油餅乾，
-                    其多層次的酥皮和香濃的奶油味使其成為法國早餐的經典之一。</p>
-            </li>
-            <li>
-                <h3>法式洋蔥湯</h3>
-                <p>這道湯以濃郁的洋蔥味和融化的芝士而聞名。
-                    通常在上面灑上一層烤至金黃的麵包片，是冬天時暖身的美味選擇。</p>
-            </li>
-            <li>
-                <h3>鵝肝醬</h3>
-                <p>鵝肝醬是一種奢華的法國美食，通常搭配脆皮麵包或水果享用。
-                    它的豐潤口感和獨特風味使其成為高級餐桌上的經典。</p>
-            </li>
-            <li>
-                <h3>鹹派</h3>
-                <p>鹹派是一種法式的餡餅，常見的餡料包括蛋、奶、芝士、蔬菜和肉類。
-                    它可以作為主菜或小點心，有許多變種供人選擇。</p>
-            </li>
-            <!-- 可以繼續添加更多美食項目 -->
-        </ul>
-    </section>
+    <div>
+        <section class="container">
+            <div class="con1">
+                <h2>美食介紹</h2>
+                <ul>
+                    <li>
+                        <h3 onmouseover="display1()" onmouseout="nodisplay()">法式麵包（Baguette）</h3>
+                        <p>
+                            法國的麵包文化是世界聞名的，而長形的法式麵包（Baguette）更是法國餐桌上的經典之一。
+                            它外脆內軟，是法國人日常生活中不可或缺的食物。</p>
+                    </li>
+                    <li>
+                        <h3 onmouseover="display2()" onmouseout="nodisplay()">奶油餅乾（Croissant）</h3>
+                        <p>起源於奧斯曼帝國的餅乾，經過法國改良成現在大家熟悉的奶油餅乾，
+                            其多層次的酥皮和香濃的奶油味使其成為法國早餐的經典之一。</p>
+                    </li>
+                    <li>
+                        <h3 onmouseover="display3()" onmouseout="nodisplay()">法式洋蔥湯（French Onion Soup）</h3>
+                        <p>這道湯以濃郁的洋蔥味和融化的芝士而聞名。
+                            通常在上面灑上一層烤至金黃的麵包片，是冬天時暖身的美味選擇。</p>
+                    </li>
+                    <li>
+                        <h3 onmouseover="display4()" onmouseout="nodisplay()">鵝肝（Foie Gras）</h3>
+                        <p>鵝肝醬是一種奢華的法國美食，通常搭配脆皮麵包或水果享用。
+                            它的豐潤口感和獨特風味使其成為高級餐桌上的經典。</p>
+                    </li>
+                    <li>
+                        <h3 onmouseover="display5()" onmouseout="nodisplay()">鹹派（Quiche Lorraine）</h3>
+                        <p>鹹派是一種法式的餡餅，常見的餡料包括蛋、奶、芝士、蔬菜和肉類。
+                            它可以作為主菜或小點心，有許多變種供人選擇。</p>
+                    </li>
+                    <!-- 可以繼續添加更多美食項目 -->
+                </ul>
+            </div>
+            <div class="con2">
+                <span id="p"></span>
+            </div>
+        </section>
+    </div>
 
-    <section>
-        <h2>圖片集</h2>
-        <p>展示國家名的美麗風景和令人垂涎的美食圖片。</p>
-        <div class="flex-container">
-            <div class="flex-item"><img src="https://placekitten.com/800/600" alt="美麗風景"></div>
-            <div class="flex-item"><img src="https://placekitten.com/800/601" alt="美食1"></div>
-            <div class="flex-item"><img src="https://placekitten.com/800/602" alt="美食2"></div>
-        </div>
-        <!-- 在這裡添加更多圖片的HTML標籤 -->
-    </section>
-
-    <!-- <footer>
-        <p>&copy; 2023 國家名 美食探索</p>
-    </footer> -->
+    <script>
+        function display1() {
+            document.getElementById("p").innerHTML = '<img class = "pic" src="foods/法國食物1.jpg">';
+        }
+        function display2() {
+            document.getElementById("p").innerHTML = '<img class = "pic" src="foods/法國食物2.jpg">';
+        }
+        function display3() {
+            document.getElementById("p").innerHTML = '<img class = "pic" src="foods/法國食物3.jpg">';
+        }
+        function display4() {
+            document.getElementById("p").innerHTML = '<img class = "pic" src="foods/法國食物4.jpg">';
+        }
+        function display5() {
+            document.getElementById("p").innerHTML = '<img class = "pic" src="foods/法國食物5.jpg">';
+        }
+        function nodisplay() {
+            document.getElementById("p").innerHTML = "";
+        }        
+    </script>
 </body>
 
 </html>
