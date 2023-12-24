@@ -22,15 +22,16 @@ body {
     height: 20px;
     text-align: center;
     padding: 100px;
+    margin-bottom: 75px;
 }
 
 .continentdiv label {
-    font-size: 20px; 
+    font-size: 20px;
 }
 
 .continent {
-    font-size: 20px; 
-    padding: 8px; 
+    font-size: 20px;
+    padding: 8px;
 }
 
 .gallery {
