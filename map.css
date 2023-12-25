@@ -63,3 +63,19 @@ body {
     padding-top: 50px;
     object-fit: cover;
 }
+
+.link-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.link-button button {
+    padding: 15px 20px; 
+    background-color: #4285f4;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px; 
+}
+
