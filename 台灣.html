@@ -15,31 +15,18 @@
         }
 
         header {
+            margin-top: 20px;
             position: relative;
             background-image: url("landmark/台灣1.jpg");
             background-position: center;
             background-repeat: no-repeat;
+            background-repeat: repeat;
+            background-size: 35%;
             text-align: center;
             padding: 20px;
-            background-color: #5B7F9E;
             color: white;
-        }
-        header {
-            position: relative;
-            background-image: url("landmark/台灣1.jpg");
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover; 
-            text-align: center;
-            padding: 20px;
-            background-color: #5B7F9E;
-            color: white;
-            background-blend-mode: multiply; 
-        }
-
-
-        header p {
-            font-size: 250%;
+            background-blend-mode: multiply;
+            height: 250px;
         }
 
         section {
@@ -91,6 +78,11 @@
             margin-top: 150px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .pic:hover {
+            transform: scale(1.2);
         }
 
         .highlight {
@@ -127,14 +119,13 @@
 
 <body>
     <header>
-        <h1>歡迎來到台灣</h1>
-        <p>發現美味的異國風情</p>
     </header>
 
     <section>
-        <h2>台灣</h2>
-        <p>台灣，正式稱為中華民國，位於亞洲東部，擁有多樣的地形和氣候。這個小島以其美麗的自然景觀、豐富的歷史和獨特的文化而聞名。</p>
-        <p>台灣是一個融合傳統和現代的社會，擁有繁榮的都市、古老的寺廟和美麗的海灣。人們熱情好客，飲食文化豐富多樣。</p>
+        <h2>台灣的國家概況與文化</h2>
+        <p>位於東亞太平洋西北岸，東隔太平洋，西隔臺灣海峽與福建省相望。這片富饒的島嶼擁有豐富多樣的地理風貌，從山脈到平原，再到沿海地區，形成多元的生態系統。</p>
+        <p>獨特的文化傳統和先進的科技產業而聞名，是一個充滿活力和多元性格的地方。台灣人民熱情好客，飲食文化豐富多樣，融合了中國、日本及原住民等不同文化元素。</p>
+        <p>台灣是一個蓬勃發展的現代社會，同時也保留著悠久的歷史和傳統，展現著獨特的魅力。</p>
     </section>
 
     <div>
@@ -143,23 +134,23 @@
                 <h2>美食介紹</h2>
                 <ul>
                     <li>
-                        <h3 onmouseover="display1()" onmouseout="nodisplay()">臭豆腐</h3>
+                        <h3><span onmouseover="display1()" onmouseout="nodisplay()">臭豆腐</span></h3>
                         <p>一種發酵過的豆腐，經過特殊處理製成，有獨特的氣味和口感。</p>
                     </li>
                     <li>
-                        <h3 onmouseover="display2()" onmouseout="nodisplay()">蚵仔煎</h3>
+                        <h3><span onmouseover="display2()" onmouseout="nodisplay()">蚵仔煎</span></h3>
                         <p>用蚵仔與蛋漿混合而成的煎餅，表面酥脆，內裡帶有嫩滑的口感。</p>
                     </li>
                     <li>
-                        <h3 onmouseover="display3()" onmouseout="nodisplay()">牛肉麵</h3>
+                        <h3><span onmouseover="display3()" onmouseout="nodisplay()">牛肉麵</span></h3>
                         <p>這是一道傳統的台灣料理，以醇厚的牛肉湯底和彈牙的牛肉片為特色，搭配麵條，是台灣人愛吃的主食之一。</p>
                     </li>
                     <li>
-                        <h3 onmouseover="display4()" onmouseout="nodisplay()">珍珠奶茶</h3>
+                        <h3><span onmouseover="display4()" onmouseout="nodisplay()">珍珠奶茶</span></h3>
                         <p>台灣是珍珠奶茶的發源地，享受著茶香和Q彈的珍珠，是台灣人生活中不可或缺的一部分。各種口味和變化多端的飲品讓人愛不釋手。</p>
                     </li>
                     <li>
-                        <h3 onmouseover="display5()" onmouseout="nodisplay()">鹽酥雞</h3>
+                        <h3><span onmouseover="display5()" onmouseout="nodisplay()">鹽酥雞</span></h3>
                         <p>雞塊裹上鹽酥粉製成，表皮酥脆，內裡多汁，是台灣夜市中的經典小吃之一。</p>
                     </li>
                 </ul>
@@ -171,19 +162,19 @@
     </div>
     <script>
         function display1() {
-            document.getElementById("p").innerHTML = '<img class = "pic" src="foods/台灣食物1.jpg">';
+            document.getElementById("p").innerHTML = '<img class="pic" src="foods/台灣食物1.jpg">';
         }
         function display2() {
-            document.getElementById("p").innerHTML = '<img class = "pic" src="foods/台灣食物2.jpg">';
+            document.getElementById("p").innerHTML = '<img class="pic" src="foods/台灣食物2.jpg">';
         }
         function display3() {
-            document.getElementById("p").innerHTML = '<img class = "pic" src="foods/台灣食物3.jpg">';
+            document.getElementById("p").innerHTML = '<img class="pic" src="foods/台灣食物3.jpg">';
         }
         function display4() {
-            document.getElementById("p").innerHTML = '<img class = "pic" src="foods/台灣食物4.jpg">';
+            document.getElementById("p").innerHTML = '<img class="pic" src="foods/台灣食物4.jpg">';
         }
         function display5() {
-            document.getElementById("p").innerHTML = '<img class = "pic" src="foods/台灣食物5.jpg">';
+            document.getElementById("p").innerHTML = '<img class="pic" src="foods/台灣食物5.jpg">';
         }
         function nodisplay() {
             document.getElementById("p").innerHTML = "";

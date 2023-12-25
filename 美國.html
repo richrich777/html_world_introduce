@@ -15,14 +15,17 @@
         }
 
         header {
+            margin-top: 20px;
+            position: relative;
+            background-image: url("landmark/美國1.jpg");
+            background-position: center;
+            background-repeat: repeat;
+            background-size: 35%;
             text-align: center;
             padding: 20px;
-            background-color: #4F94CD;
             color: white;
-        }
-
-        header p {
-            font-size: 250%;
+            background-blend-mode: multiply;
+            height: 250px;
         }
 
         section {
@@ -103,14 +106,14 @@
 
 <body>
     <header>
-        <h1>歡迎來到美國</h1>
-        <p>探索這個多元國家的美食之旅</p>
     </header>
 
     <section>
-        <h2>美國</h2>
-        <p>美國，通常被稱為「自由之地」，是位於北美洲的一個廣大而多元的國家。以其豐富的歷史、文化大熔爐和標誌性地標而聞名，美國為遊客提供了各種各樣的體驗。</p>
-        <p>從紐約和洛杉磯等繁忙城市到大峽谷和黃石等寧靜的風景，美國是一個充滿對比的國度。</p>
+        <h2>美國的國家概況與文化</h2>
+        <p>北美洲的一個多元文化國家，擁有廣袤的地理範圍，包括大片平原、壯麗的群山、延綿的河流和多樣的氣候。
+            作為世界上最強大的經濟體之一，美國在科技、文化、教育、藝術和政治領域都有深遠的影響力。</p>
+        <p>其政治制度為聯邦制共和國，由50個州組成，每個州擁有相對獨立的政府。</p>
+        <p>美國以其自由民主的價值觀、創新精神和多元的社會結構而聞名，吸引著來自世界各地的人才和移民。</p>
     </section>
 
     <div>
@@ -119,23 +122,23 @@
                 <h2>美食介紹</h2>
                 <ul>
                     <li>
-                        <h3 onmouseover="display1()" onmouseout="nodisplay()">美式漢堡（Hamburger）</h3>
+                        <h3><span onmouseover="display1()" onmouseout="nodisplay()">美式漢堡（Hamburger）</span></h3>
                         <p>漢堡是美國最經典的快餐之一，通常由牛肉餅夾在麵包中，並配以各種配料如生菜、番茄、洋蔥和醬汁。</p>
                     </li>
                     <li>
-                        <h3 onmouseover="display2()" onmouseout="nodisplay()">芝加哥風味披薩（Chicago-style Pizza）</h3>
+                        <h3><span onmouseover="display2()" onmouseout="nodisplay()">芝加哥風味披薩（Chicago-style Pizza）</span></h3>
                         <p>芝加哥風味的披薩以其厚實的餅皮、豐富的餡料和反轉的烤製方式而聞名。</p>
                     </li>
                     <li>
-                        <h3 onmouseover="display3()" onmouseout="nodisplay()">美式早餐（American Breakfast）</h3>
+                        <h3><span onmouseover="display3()" onmouseout="nodisplay()">美式早餐（American Breakfast）</span></h3>
                         <p>包括培根、饅頭、香腸、荷包蛋和煎薯條等，是一頓豐盛的早餐。</p>
                     </li>
                     <li>
-                        <h3 onmouseover="display4()" onmouseout="nodisplay()">紐約芝士蛋糕（New York Cheesecake）</h3>
+                        <h3><span onmouseover="display4()" onmouseout="nodisplay()">紐約芝士蛋糕（New York Cheesecake）</span></h3>
                         <p>這是一種口感細緻、滑順的起司蛋糕，是紐約市的經典甜點之一。</p>
                     </li>
                     <li>
-                        <h3 onmouseover="display5()" onmouseout="nodisplay()">烤肋排（Barbecue Ribs）</h3>
+                        <h3><span onmouseover="display5()" onmouseout="nodisplay()">烤肋排（Barbecue Ribs）</span></h3>
                         <p>美國的燒烤文化非常盛行，烤肋排是其中一道經典的燒烤菜肴，塗上特製的烤肉醬，經過慢烤而變得香嫩多汁。</p>
                     </li>
                 </ul>
@@ -162,7 +165,7 @@
         }
         function display5() {
             document.getElementById("p").innerHTML = '<img class = "pic" src="foods/美國食物5.jpg">';
-        }        
+        }
         function nodisplay() {
             document.getElementById("p").innerHTML = "";
         }        

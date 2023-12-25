@@ -1,54 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>左右圖片漸層</title>
+    <title>問答頁面</title>
     <style>
-        .image-container {
-            position: relative;
-            width: 300px;
-            height: 200px;
-            overflow: hidden;
+        /* 可以加入一些樣式來美化頁面 */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
         }
 
-
-        .gradient-overlay-right {
-            position: absolute;
-            top: 0;
-            height: 100%;
-            width: 50%;
-            background: linear-gradient(to left, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
+        .question-container {
+            margin-bottom: 20px;
         }
 
-        .gradient-overlay-left
-        {
-        position: absolute;
-        top: 0;
-        height: 100%;
-        width: 50%;
-        background: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
+        .options-container {
+            display: flex;
+            flex-direction: column;
         }
 
-        .gradient-overlay-right {
-            left: 50%;
+        .option {
+            margin-bottom: 10px;
         }
 
-        .image {
-            width: 100%;
+        img {
+            max-width: 100%;
             height: auto;
-            display: block;
         }
     </style>
 </head>
-
 <body>
-    <div class="image-container">
-        <div class="gradient-overlay-right"></div>
-        <div class="gradient-overlay-left"></div>
-        <img class="image" src="landmark/台灣1.jpg" alt="Your Image">
-    </div>
-</body>
 
+<div class="question-container">
+    <h2>這是一個問題的標題</h2>
+    <p>這是問題的描述或說明文字。</p>
+</div>
+
+<div class="options-container">
+    <div class="option">
+        <input type="radio" name="answer" id="option1">
+        <label for="option1">選項 1</label>
+        <!-- 可以放置照片或文字在這裡 -->
+        <img src="path/to/image1.jpg" alt="Option 1">
+    </div>
+
+    <div class="option">
+        <input type="radio" name="answer" id="option2">
+        <label for="option2">選項 2</label>
+        <!-- 可以放置照片或文字在這裡 -->
+        <p>這是選項 2 的文字描述。</p>
+    </div>
+
+    <div class="option">
+        <input type="radio" name="answer" id="option3">
+        <label for="option3">選項 3</label>
+        <!-- 可以放置照片或文字在這裡 -->
+        <img src="path/to/image3.jpg" alt="Option 3">
+    </div>
+
+    <div class="option">
+        <input type="radio" name="answer" id="option4">
+        <label for="option4">選項 4</label>
+        <!-- 可以放置照片或文字在這裡 -->
+        <p>這是選項 4 的文字描述。</p>
+    </div>
+</div>
+
+</body>
 </html>

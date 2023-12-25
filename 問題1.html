@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>問答頁面</title>
+    <style>
+        /* 可以加入一些樣式來美化頁面 */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .question-container {
+            margin-bottom: 20px;
+        }
+
+        .options-container {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .option {
+            float: left;
+            margin-bottom: 10px;
+        }
+
+        button {
+            margin-right: 30px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            height: 300px;
+            width: 350px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="question-container">
+        <span id="n1"></span>
+    </div>
+    <div id="qustion"></div>
+    <div id="ans"></div>
+    <script>
+        let c1;
+        function start() {
+            fetch("https://richrich777.github.io/json/%E5%95%8F%E9%A1%8C1.json").then(function (respone) {
+                return respone.json();
+            }).then(function (data) {
+                let d1 = Math.floor(Math.random() * data.length);
+                let n1 = document.querySelector("#n1");
+                let content = document.querySelector("#qustion");
+                let c = [data[d1].contry1, data[d1].contry2, data[d1].contry3, data[d1].contry4];
+                let n = Math.floor(Math.random() * 4);
+                c1 = c[n];
+                let p1 = Math.floor(1 + Math.random() * 5);
+                let p2 = Math.floor(1 + Math.random() * 5);
+                let p3 = Math.floor(1 + Math.random() * 5);
+                let p4 = Math.floor(1 + Math.random() * 5);
+                n1.innerHTML = "<h2>請問下列何者是" + c1 + "特色食物?</h2>"
+                content.innerHTML += '<div class="option"><label><input type="radio" name="answer"><img src="foods/' + data[d1].contry1 + "食物" + p1 + '.jpg" alt="' + data[d1].contry1 + '"></label></div>';
+                content.innerHTML += '<div class="option"><label><input type="radio" name="answer"><img src="foods/' + data[d1].contry2 + "食物" + p2 + '.jpg" alt="' + data[d1].contry2 + '"></label></div>';
+                content.innerHTML += '<div class="option"><label><input type="radio" name="answer"><img src="foods/' + data[d1].contry3 + "食物" + p3 + '.jpg" alt="' + data[d1].contry3 + '"></label></div>';
+                content.innerHTML += '<div class="option"><label><input type="radio" name="answer"><img src="foods/' + data[d1].contry4 + "食物" + p4 + '.jpg" alt="' + data[d1].contry4 + '"></label></div>';
+                content.innerHTML += '<button onclick="check()">送出</button>';
+                content.innerHTML += '<button onclick="back()">首頁</button>';
+            })
+        }
+        function back() {
+            window.location.href = "worldfoods.html";
+        }
+        function next() {
+            window.location.href = "問題2.html";
+        }
+        function check() {
+            var options = document.getElementsByName("answer");
+            var selectedOption;
+
+            for (var i = 0; i < options.length; i++) {
+                if (options[i].checked) {
+                    selectedOption = options[i].parentNode.querySelector("img").alt;
+                    break;
+                }
+            }
+            if (selectedOption == undefined) {
+                alert("請選擇一個選項");
+            }
+            else if (selectedOption == c1) {
+                document.querySelector("#ans").innerHTML = "<h3>恭喜你答對!</h3>";
+                // 在這裡可以進行答案正確與否的判斷，並更新頁面
+            }
+            else {
+                document.querySelector("#ans").innerHTML = "<h3>很抱歉，你答錯了!</h3>";
+            }
+
+        }
+
+        window.addEventListener("load", start);
+    </script>
+</body>
+
+</html>

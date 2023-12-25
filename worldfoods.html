@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>世界特色美食</title>
     <style>
-                body {
-            font-family: Arial, sans-serif;
+        body {
+            background-image: url('landmark/背景1.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+        }
+
+        div {
+            padding-top: 30px;
         }
 
         header {
@@ -23,13 +31,13 @@
             display: flex;
             justify-content: center;
             background-color: #555;
-            padding: 0.5em;
+            padding: 1em 0;
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            padding: 0.5em 1em;
+            padding: 1em;
             margin: 0 1em;
             border-radius: 5px;
             transition: background-color 0.3s;
@@ -38,36 +46,49 @@
         nav a:hover {
             background-color: #777;
         }
+
         @media (max-width: 600px) {
-        nav{
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            nav {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
         }
+
+        h2,
+        p {
+            text-align: center;
+            font-size: 150%;
+            color: white;
+        }
+
+        #content {
+            max-width: 800px;
+            margin: 2em auto;
+            padding: 1em;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
+
 <body>
 
     <header>
-        <h1>世界特色美食</h1>
+        <h1>世界特色美食與文化</h1>
     </header>
 
     <nav>
-        <a href="Operation.html">操作介紹</a>
-        <a href="map.html">尋找特色美食</a>
+        <a href="map.html">尋找國家</a>
         <a href="#">文件</a>
-        <!-- 新增的連結 -->
-        <a href="#contact">聯絡我們</a>
+        <a href="問題1.html">小測驗</a>
     </nav>
-
-    <section id="content">
+    <div class="p">
         <h2>歡迎來到世界特色美食網站</h2>
-        <p>這裡將帶領您探索全球各地的特色美食。無論是異國風味、當地特色或者是傳統美食，我們都將為您呈現最精彩的味蕾之旅。</p>
-
-    </section>
-
-
+        <p>這裡將帶領您探索全球各地的特色美食。無論是異國風味、當地特色或者是傳統美食，我們都一一為您作介紹。</p>
+    </div>
 
 </body>
+
 </html>
